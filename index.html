@@ -1,89 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://kit.fontawesome.com/615154bd6d.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
     <title>Document</title>
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/615154bd6d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <form class="form">
+      <label for="username">Username: </label>
+      <input type="text" id="username" placeholder="Example: elnur" />
+      <label for="password">Password: </label>
+      <input type="password" id="password" placeholder="Example: 123123" />
+      <input type="submit" value="Log In" />
+    </form>
+    <main class="main">
+      <div class="open">Open the basket</div>
+      <div class="shop">
+        <div class="product" data-id="1">
+          <div class="product-card">
+            <img
+              src="./assets/images/products/macbook pro 16.webp"
+              alt="macbook pro 16"
+            />
+          </div>
+          <button>Buy!</button>
+        </div>
+        <div class="product" data-id="2">
+          <div class="product-card">
+            <img
+              src="./assets/images/products/macbook pro 14.webp"
+              alt="macbook pro 14"
+            />
+          </div>
+          <button>Buy!</button>
+        </div>
+        <div class="product" data-id="3">
+          <div class="product-card">
+            <img
+              src="./assets/images/products/imac pink.webp"
+              alt="imac pink"
+            />
+          </div>
+          <button>Buy!</button>
+        </div>
+        <div class="product" data-id="4">
+          <div class="product-card">
+            <img
+              src="./assets/images/products/macbook air.webp"
+              alt="macbook air"
+            />
+          </div>
+          <button>Buy!</button>
+        </div>
+        <div class="product" data-id="5">
+          <div class="product-card">
+            <img src="./assets/images/products/mac mini.webp" alt="mac mini" />
+          </div>
+          <button>Buy!</button>
+        </div>
+        <div class="product" data-id="6">
+          <div class="product-card">
+            <img src="./assets/images/products/imac pro.webp" alt="imac pro" />
+          </div>
+          <button>Buy!</button>
+        </div>
+        <div class="product" data-id="7">
+          <div class="product-card">
+            <img
+              src="./assets/images/products/pro display.webp"
+              alt="apple pro display"
+            />
+          </div>
+          <button>Buy!</button>
+        </div>
+        <div class="product" data-id="8">
+          <div class="product-card">
+            <img src="./assets/images/products/mac pro.webp" alt="mac pro" />
+          </div>
+          <button>Buy!</button>
+        </div>
+      </div>
+      <div class="basket">
+        <span class="count" id="productCount">0</span>
+        <i class="fas fa-shopping-basket"></i>
+      </div>
+      <button id="logout">Log out</button>
+    </main>
 
-<div class="container">
-    <div class="container__inner">
-
-        <div class="product">
-            <h2>Macbook pro 14</h2>
-            <img src="./assets/images/products/macbook-14.webp" alt="">
-            <span>Price</span>
-            <button>Add to basket</button>
-        </div>
-        <div class="product">
-            <h2>Imac 21.5</h2>
-            <img src="./assets/images/products/imac-21.5.webp" alt="">
-            <span>Price</span>
-            <button>Add to basket</button>
-        </div>
-        <div class="product">
-            <h2>Imac 24</h2>
-            <img src="./assets/images/products/imac-24.webp" alt="">
-            <span>Price</span>
-            <button>Add to basket</button>
-        </div>
-        <div class="product">
-            <h2>Ipad 9</h2>
-            <img src="./assets/images/products/ipad-9.webp" alt="">
-            <span>Price</span>
-            <button>Add to basket</button>
-        </div>
-        <div class="product">
-            <h2>Ipad 10</h2>
-            <img src="./assets/images/products/ipad-10.jpeg" alt="">
-            <span>Price</span>
-            <button>Add to basket</button>
-        </div>
-        <div class="product">
-            <h2>Ipad Pro</h2>
-            <img src="./assets/images/products/ipad-pro.webp" alt="">
-            <span>Price</span>
-            <button>Add to basket</button>
-        </div>
-        <div class="product">
-            <h2>Macbook pro 14</h2>
-            <img src="./assets/images/products/macbook-14-grey.webp" alt="">
-            <span>Price</span>
-            <button>Add to basket</button>
-        </div>
-        <div class="product">
-            <h2>Macbook Air</h2>
-            <img src="./assets/images/products/macbook-air-gold.webp" alt="">
-            <span>Price</span>
-            <button>Add to basket</button>
-        </div>
-        <div class="product">
-            <h2>Macbook pro 13</h2>
-            <img src="./assets/images/products/macbook-pro-13.webp" alt="">
-            <span>Price</span>
-            <button>Add to basket</button>
-        </div>
-        <div class="product">
-            <h2>Apple watch SE</h2>
-            <img src="./assets/images/products/watch-7.webp" alt="">
-            <span>Price</span>
-            <button>Add to basket</button>
-        </div>
-
-    </div>
-</div>
-
-<div class="basket">
-    <i class="fas fa-shopping-basket"></i>
-    <p class="basket-text">Count of items: <span class="basket-count">0</span></p>
-    <button class="show-all">Show all</button>
-</div>
-
-<script src="js/index.js"></script>
-</body>
+    <script src="./js/index.js"></script>
+  </body>
 </html>
