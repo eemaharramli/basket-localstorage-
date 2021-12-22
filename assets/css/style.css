@@ -1,95 +1,182 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
+	box-sizing: border-box;
+	margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-  background: #1d1d1f;
-  background-size: cover;
+	width: 100%;
+	height: 900px;
+	padding-top: 50px;
+    background: url('../images/background/apple-bg.png') center center no-repeat;
+    background-size: cover;
 }
 
-.container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  width: 1500px;
-  height: 800px;
-}
-.container__inner {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-.container__inner .product {
-  width: 300px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-  text-align: center;
-  background: transparent;
-  justify-content: space-between;
-  border: 1px solid #ffffff;
-  transition: 0.3s linear all;
-  overflow: hidden;
-}
-.container__inner .product:hover {
-  background: grey;
-}
-.container__inner .product img {
-  max-width: 300px;
-  max-height: 200px;
-}
-.container__inner .product button {
-  width: 100px;
-  height: 20px;
-  border-radius: 5px;
-  background: cornflowerblue;
-  color: #fff;
-  transition: 0.3s ease-in-out all;
-  margin-left: 100px;
-}
-.container__inner .product button:hover {
-  cursor: pointer;
-  color: cornflowerblue;
-  background: #fff;
+form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 170px;
 }
 
-.basket {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 250px;
-  height: 250px;
-  background: grey;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  align-items: center;
-}
-.basket i {
-  font-size: 80px;
-}
-.basket-text {
-  font-size: 32px;
-}
-.basket .show-all {
-  width: 100px;
-  height: 30px;
-  background: cadetblue;
-  border-radius: 10px;
-  transition: 0.3s linear all;
-}
-.basket .show-all:hover {
-  cursor: pointer;
+form input[type='submit']{
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 80px;
+    height: 20px;
+    text-transform: uppercase;
+    background: #434343;
+    color: #fff;
+    transition: .3s linear all;
 }
 
-/*# sourceMappingURL=style.css.map */
+form input[type='submit']:hover{
+    background: #fff;
+    color: #434343;
+    cursor: pointer;
+}
+
+.main{
+    display: none;
+}
+
+.open {
+	display: block;
+	margin: 0 auto;
+	width: 250px;
+	height: 50px;
+	margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 4px;
+	font-size: 22px;
+	text-align: center;
+	line-height: 50px;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.open:hover {
+    transform: scale(1.05);
+}
+
+.shop {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 90%;
+	min-height: 560px;
+	margin: 0 auto;
+	padding: 60px 30px;
+    background-color: rgba(0,0,0,.7);
+    border-radius: 8px;
+}
+
+.product {
+	width: 23%;
+	min-height: 200px;
+	margin-right: 1%;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 0 30px rgba(256,256,256, .4);
+}
+
+.product .product-card {
+	display: block;
+	width: 90%;
+	height: 180px;
+	margin: 0 auto;
+	margin-top: 5%;
+    text-align: center;
+}
+
+.product .product-card img {
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+	display: block;
+	width: 120px;
+	height: 30px;
+	margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+	cursor: pointer;
+}
+
+.cart {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	background-color: rgba(0,0,0,.9)
+}
+
+h2 {
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.cart .cart-field {
+	width: 80%;
+	height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	margin-top: 30px;
+	border: 1px solid white;
+}
+
+.close {
+	width: 200px;
+	height: 50px;
+	background-color: #fff;
+	font-size: 26px;
+	margin-top: 10px;
+}
+
+.basket{
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    transition: .3s linear all;
+}
+
+.basket i{
+    font-size: 50px;
+    color: rgba(256,256,256, .4);
+    transition: .3s linear all;
+}
+
+.basket span{
+    position: absolute;
+    color: red;
+    top: 0;
+    right: 0;
+}
+
+.basket:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.basket:hover i{
+    color: #fff;
+}
