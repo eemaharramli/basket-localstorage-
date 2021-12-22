@@ -152,16 +152,11 @@ function logOff() {
 
 buyBtn.forEach((item) => {
   // find user basket
-  /*  if(basket != null) {
-        basket = JSON.parse(basket);
-        var isUserBasket = basket.filter((e) => e);
-
-    }*/
 
   item.addEventListener("click", (e) => {
-    var productID = e.target.parentNode.getAttribute("data-id");
+    let productID = e.target.parentNode.getAttribute("data-id");
     let itemIMG = e.target.parentNode.children[0].children[0].src;
-    var basket = JSON.parse(localStorage.getItem(BASKET));
+    let basket = JSON.parse(localStorage.getItem(BASKET));
 
     if (basket == null) basket = [];
 
@@ -172,7 +167,7 @@ buyBtn.forEach((item) => {
 
       countSpan.textContent = countOfProducts;
 
-      var request = {
+      let request = {
         username: "elnur",
         item: productID,
         img: itemIMG,
